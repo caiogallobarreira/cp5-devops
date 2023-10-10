@@ -5,17 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 
 import br.com.fiap.cde.models.Estoque;
 import br.com.fiap.cde.models.Produto;
-import br.com.fiap.cde.models.Usuario;
 import br.com.fiap.cde.repository.EstoqueRepository;
 import br.com.fiap.cde.repository.ProdutoRepository;
-import br.com.fiap.cde.repository.UsuarioRepository;
 
 @Configuration
-@Profile("dev")
 public class DatabaseSeeder implements CommandLineRunner{
 
     @Autowired
@@ -24,9 +20,6 @@ public class DatabaseSeeder implements CommandLineRunner{
     @Autowired
     private EstoqueRepository estoqueRepository;
 
-    @Autowired
-    private UsuarioRepository usuarioRepository;
-
     @Override
     public void run(String... args) throws Exception {
         estoqueRepository.saveAll(List.of(
@@ -34,10 +27,6 @@ public class DatabaseSeeder implements CommandLineRunner{
             new Estoque(2L, "Estoque 2", "Descricao do estoque 2"),
             new Estoque(3L, "Estoque 3", "Descricao do estoque 3"),
             new Estoque(4L, "Estoque 4", "Descricao do estoque 4")
-        ));
-
-        usuarioRepository.saveAll(List.of(
-            new Usuario (1L, "Usuario 1", "caiogallobarreira@gmail.com", "123456")
         ));
 
         produtoRepository.saveAll(List.of(
