@@ -16,7 +16,6 @@ Este projeto consiste em auxiliar E-commerces a controlarem seus produtos de man
     - [Estoque mínimo](#estoque-mínimo)
     - [Apagar produto](#apagar-produto)
     - [Atualizar produto](#atualizar-produto)
-- Usuário `/api/v1/usuario`
 
 ## :package: Estoque
 
