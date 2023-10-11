@@ -2,7 +2,24 @@
 ### Objetivo do Projeto
 Este projeto consiste em auxiliar E-commerces a controlarem seus produtos de maneira eficiente
 
-## Endpoints
+## :rocket: How to - Deploy na Azure
+1. Crie um Serviço de Aplicativo na Azure
+   
+    1.1. Selecione Aplicativo
+
+    1.2. Selecione o Runtime Stack Java 17
+
+    1.3. Selecione o Sistema Operacional Linux
+
+2. Altere o arquivo `application.properties` com as informações do banco de dados (MySQL, PostgreSQL, Oracle) que está localizado na pasta `src/main/resources`
+
+3. Faça o deploy do projeto na Azure
+
+    3.1. Utilize o plugin da Azure em alguma IDE (IntelliJ, Eclipse, VSCode) ou utilize a Azure CLI
+
+4. Acesse a URL do projeto gerado pela Azure
+
+## 🌐 Endpoints
 - Estoque `/api/v1/estoque`
     - [Cadastrar estoque](#cadastrar-estoque)
     - [Listar todos](#listar-todos)
